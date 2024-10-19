@@ -1,0 +1,203 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 500px;
+    margin: 120px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.bogo-container {
+    display: flex;
+}
+
+.line {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0;
+    width: 31%;
+    margin: 10px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6a6a;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.custom-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    opacity: 0;
+}
+
+.box {
+    padding: 27px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+/* Position the radio buttons */
+input[type="radio"] {
+    position: absolute;
+    top: 42px;
+    left: 10px;
+    accent-color: #ff6a6a;
+}
+
+/* Style for the popular tag */
+.popular {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: #ff6f61;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* Offer container styles */
+.offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offerprice {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.discount {
+    background-color: #ff6a6a;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.price {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.2em;
+    flex-direction: column;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.options {
+    margin-top: 10px;
+    padding-top: 10px;
+    display: none; /* Hide by default */
+}
+
+/* Add styles for when the box is highlighted */
+.box.highlight {
+    background-color: #ffe5e5; /* Highlight background */
+    border: 2px solid #ff6a6a; /* Highlight border */
+}
+
+/* This rule applies the highlight to the box container */
+.box input[type="radio"]:checked + label + .options {
+    display: block; /* Show options if needed */
+}
+
+/* Adding styles to the .box when the radio is checked (general approach) */
+.box input[type="radio"]:checked ~ .box {
+    background-color: #ffe5e5; /* Ensure options also get highlighted */
+}
+
+
+
+/* Other styles remain unchanged */
+.option-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.option-row select {
+    padding: 5px 25px 5px 5px;
+    font-size: 1em;
+}
+
+.option-row span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#size {
+    margin-left: 39px;
+}
+
+#color {
+    margin-right: 229px;
+}
+
+select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+/* Add to cart button */
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6a6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.delivery {
+    color: #ff6a6a;
+    text-align: left;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.total {
+    text-align: right;
+    font-size: 1.1em;
+    margin-top: -20px;
+}
